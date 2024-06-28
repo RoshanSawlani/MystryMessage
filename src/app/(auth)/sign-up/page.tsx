@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -60,7 +60,7 @@ const Page = () => {
     const onSubmit = async (data: z.infer<typeof signUpSchema>) => {
         setIsSubmitting(true)
         try {
-            const response = await axios.post<ApiResponse>('/api/sign-up', data,{ timeout: 10000 })
+            const response = await axios.post<ApiResponse>('/api/sign-up', data)
             toast({
                 title: 'Success',
                 description: response.data.message
