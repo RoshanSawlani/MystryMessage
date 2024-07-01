@@ -98,14 +98,14 @@ const Page = () => {
                                 <FormItem>
                                     <FormLabel>Username</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="username" {...field} 
-                                        onChange={(e)=>{
-                                            field.onChange(e)
-                                            debounced(e.target.value)
-                                        }}/>
+                                        <Input placeholder="username" {...field}
+                                            onChange={(e) => {
+                                                field.onChange(e)
+                                                debounced(e.target.value)
+                                            }} />
                                     </FormControl>
-                                        {isCheckingUsername && <Loader2 className="animate-spin"/>}
-                                        <p className={`text-sm ${usernameMessage === "Username is unique" ? 'text-green-500' : 'text-red-500'}`}>test {usernameMessage}</p>
+                                    {isCheckingUsername && <Loader2 className="animate-spin" />}
+                                    <p className={`text-sm ${usernameMessage === "Username is unique" ? 'text-green-500' : 'text-red-500'}`}>test {usernameMessage}</p>
                                     <FormMessage />
                                 </FormItem>
                             )}
@@ -139,10 +139,10 @@ const Page = () => {
                         <Button type="submit" disabled={isSubmitting}>{
                             isSubmitting ? (
                                 <>
-                                <Loader2 className="mr-2 h-4 w-4 animate-spin"/> Please wait
+                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please wait
                                 </>
                             ) : ('Signup')
-                    }</Button>
+                        }</Button>
                     </form>
                 </Form>
                 <div className="text-center mt-4">
